@@ -21,7 +21,7 @@ export class ExperienceComponent {
   readonly roles: Role[] = [
     {
       period: '2023 — Now',
-      company: 'LMKR',
+      company: 'CienTech',
       role: 'Application Designer',
       current: true,
     },

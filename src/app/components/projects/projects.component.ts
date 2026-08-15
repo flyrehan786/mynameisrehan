@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
 import { RevealDirective } from '../../reveal.directive';
+import { PlayInViewDirective } from '../../play-in-view.directive';
 
 interface Project {
   name: string;
@@ -11,7 +12,7 @@ interface Project {
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [NgFor, NgIf, RevealDirective],
+  imports: [NgFor, NgIf, RevealDirective, PlayInViewDirective],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
@@ -37,7 +38,8 @@ export class ProjectsComponent {
     {
       name: 'RescueFurWorld',
       description:
-        'Description coming soon — a short overview of the product, my role, and the technologies used.',
+        'Every rescue has a story. RescueFurWorld gives rescued cats a second chance at life — one journey at a time. The platform documents the complete arc of each cat, from the moment they are found, through medical care and recovery, to the day they find a safe and loving forever home. Built around compassion and care, it shares real stories of struggle, survival, and hope, and supports the people who dedicate their time to helping them. Small acts of kindness. Big second chances.',
+      video: 'assets/rescuefurworld.mp4',
     },
   ];
 }

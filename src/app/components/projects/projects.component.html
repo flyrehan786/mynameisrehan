@@ -18,13 +18,14 @@
         <div class="project-media" aria-hidden="true">
           <video
             *ngIf="project.video; else placeholder"
+            appPlayInView
             class="project-video"
             [src]="project.video"
             controls
-            autoplay
             muted
             loop
             playsinline
+            preload="metadata"
           ></video>
           <ng-template #placeholder>
             <div class="video-placeholder">

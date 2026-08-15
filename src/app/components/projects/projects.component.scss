@@ -24,6 +24,22 @@
   width: 100%;
 }
 
+.project-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: #0e1620;
+  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.project:hover .project-video {
+  border-color: var(--accent);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
 .video-placeholder {
   aspect-ratio: 16 / 9;
   border-radius: var(--radius);

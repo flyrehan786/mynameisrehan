@@ -16,10 +16,22 @@
           <p>{{ project.description }}</p>
         </div>
         <div class="project-media" aria-hidden="true">
-          <div class="video-placeholder">
-            <span class="play">▶</span>
-            <span class="placeholder-label">Video coming soon</span>
-          </div>
+          <video
+            *ngIf="project.video; else placeholder"
+            class="project-video"
+            [src]="project.video"
+            controls
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
+          <ng-template #placeholder>
+            <div class="video-placeholder">
+              <span class="play">▶</span>
+              <span class="placeholder-label">Video coming soon</span>
+            </div>
+          </ng-template>
         </div>
       </article>
     </div>

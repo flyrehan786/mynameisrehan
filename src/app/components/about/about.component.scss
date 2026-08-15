@@ -1,0 +1,32 @@
+:host {
+  display: block;
+}
+
+.about {
+  background: var(--bg);
+}
+
+.about-copy {
+  max-width: none;
+  margin: 20px 0 0;
+}
+
+.about-copy p {
+  font-size: 1rem;
+  color: var(--ink-2);
+  margin-bottom: 20px;
+  line-height: 1.85;
+}
+
+.about-copy em {
+  color: #fff;
+  font-weight: 400;
+}
+
+.off-hours {
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 20px;
+}

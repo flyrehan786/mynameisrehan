@@ -1,0 +1,21 @@
+<section id="skills" class="skills">
+  <div class="container">
+    <header appReveal>
+      <h1 class="section-title">Skills</h1>
+    </header>
+
+    <div class="skills-grid">
+      <article
+        class="skill-block"
+        *ngFor="let group of groups"
+        appReveal
+      >
+        <h2>{{ group.title }}</h2>
+        <ul>
+          <li *ngFor="let item of group.items">{{ item }}</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+

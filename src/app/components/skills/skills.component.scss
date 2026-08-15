@@ -1,0 +1,59 @@
+:host {
+  display: block;
+}
+
+.skills {
+  background: var(--bg);
+}
+
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 20px;
+}
+
+.skill-block h2 {
+  color: var(--accent);
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 0 14px;
+  text-shadow: 1px 1px 10px var(--accent-shadow);
+}
+
+.skill-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-block ul li {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: #fff;
+  letter-spacing: 0.5px;
+  padding: 7px 16px;
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease),
+    background 0.2s var(--ease), transform 0.2s var(--ease);
+  cursor: default;
+}
+
+.skill-block ul li:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 720px) {
+  .skill-block h2 {
+    font-size: 1.2rem;
+  }
+}

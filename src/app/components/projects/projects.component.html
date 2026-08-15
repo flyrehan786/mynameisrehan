@@ -1,0 +1,38 @@
+<section id="projects" class="projects">
+  <div class="container">
+    <header appReveal>
+      <h1 class="section-title">Recent Projects</h1>
+    </header>
+
+    <div class="project-list">
+      <article
+        class="project"
+        *ngFor="let project of recent; let i = index"
+        appReveal
+      >
+        <div class="project-body">
+          <span class="project-index">0{{ i + 1 }}</span>
+          <h2>{{ project.name }}</h2>
+          <p>{{ project.description }}</p>
+        </div>
+        <div class="project-media" aria-hidden="true">
+          <div class="video-placeholder">
+            <span class="play">▶</span>
+            <span class="placeholder-label">Video coming soon</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="past" appReveal>
+      <h1 class="section-title past-title">Past Projects</h1>
+      <p>
+        I've been involved in numerous projects of varying size and complexity
+        over my professional experience. This includes designing and coding
+        Web 2.0 sites, frameworks, peer-to-peer applications, and mobile apps.
+        Projects listed above are the ones that demonstrate my diverse range
+        of skills.
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<section id="education" class="education">
+  <div class="container">
+    <header appReveal>
+      <h1 class="section-title">Qualifications</h1>
+    </header>
+
+    <ol class="timeline">
+      <li class="timeline-item" *ngFor="let d of degrees" appReveal>
+        <div class="marker" [class.is-current]="d.current"></div>
+        <div class="body">
+          <span class="period">{{ d.year }}</span>
+          <h3>
+            {{ d.title }}
+            <span class="at">at</span>
+            <span class="school">{{ d.school }}</span>
+            <span *ngIf="d.current" class="badge">Current</span>
+          </h3>
+          <p class="loc">{{ d.location }}</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>

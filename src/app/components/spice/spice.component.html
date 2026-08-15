@@ -1,0 +1,14 @@
+<section
+  class="spice"
+  [ngClass]="{
+    'spice-primary': variant === 'primary',
+    'spice-secondary': variant === 'secondary',
+    'spice-dark': variant === 'dark',
+    'spice-big': big
+  }"
+>
+  <div class="container" appReveal>
+    <h1>{{ title }}</h1>
+    <p *ngIf="subtitle">{{ subtitle }}</p>
+  </div>
+</section>

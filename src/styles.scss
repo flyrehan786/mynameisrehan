@@ -1,0 +1,278 @@
+/* ---------- Design tokens (inspired by mynameismosh.com) ---------- */
+:root {
+  /* Palette */
+  --bg: #273747;
+  --bg-2: #1f2b38;
+  --bg-3: #1a2531;
+  --surface: #2f4055;
+  --surface-2: #22303e;
+  --ink: #ffffff;
+  --ink-2: #8da0b5;
+  --muted: #63798f;
+  --line: #324659;
+  --line-2: #3d5164;
+
+  --accent: #efc94c;
+  --accent-hover: #f5d876;
+  --accent-shadow: #1f2b38;
+  --accent-2: #6dbcdb;
+  --accent-2-shadow: #387c96;
+
+  --spice-red: #fc4349;
+  --spice-red-ink: #73292b;
+  --spice-red-shadow: #c93035;
+  --spice-cyan: #6dbcdb;
+  --spice-cyan-ink: #0e3b4d;
+  --spice-cyan-shadow: #387c96;
+
+  /* Typography */
+  --font-heading: 'Lato', Arial, Helvetica, sans-serif;
+  --font-body: 'Questrial', helvetica, arial, sans-serif;
+
+  /* Shape */
+  --radius-sm: 4px;
+  --radius: 6px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  color: var(--ink-2);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.25s ease-in-out;
+}
+
+a:hover {
+  color: #fff;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+::selection {
+  background: #fff;
+  color: #262e31;
+}
+
+/* ---------- Typography ---------- */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  color: var(--ink);
+  font-weight: 700;
+  margin: 0 0 0.6em;
+  letter-spacing: 1px;
+}
+
+h1 {
+  color: #fff;
+  font-size: clamp(1.4rem, 2.4vw, 1.75rem);
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 0 0 10px #1d2a36;
+}
+
+h2 {
+  color: var(--accent);
+  font-family: var(--font-heading);
+  font-size: 1.5em;
+  margin: 1em 0;
+  text-shadow: 1px 1px 10px var(--accent-shadow);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+p {
+  color: var(--ink-2);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.75em;
+  letter-spacing: 1px;
+  margin: 0 0 1.6em;
+}
+
+em {
+  font-style: normal;
+  color: #adc5de;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: clamp(72px, 10vw, 120px) 0;
+  scroll-margin-top: 80px;
+}
+
+.section-title {
+  display: inline-block;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-top: 1px solid var(--line);
+  padding-top: 1.2em;
+  margin: 0 0 2em;
+  text-shadow: 0 0 10px #1d2a36;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.25s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #1f2b38 !important;
+  border-color: var(--accent);
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #1f2b38 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(239, 201, 76, 0.25);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--line-2);
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.btn .arrow {
+  transition: transform 0.25s var(--ease);
+}
+
+.btn:hover .arrow {
+  transform: translateX(3px);
+}
+
+/* ---------- Tags (skill / project chips) ---------- */
+.tags {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags li,
+.tag {
+  background: #15202d;
+  color: #8da0b5;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 1.5px;
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.tags li:hover,
+.tag:hover {
+  background: var(--accent);
+  color: #1f2b38;
+}
+
+/* ---------- Reveal animation ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

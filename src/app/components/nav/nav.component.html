@@ -1,0 +1,25 @@
+<header class="nav" [class.is-scrolled]="scrolled" [class.is-open]="menuOpen">
+  <div class="container nav-inner">
+    <nav class="nav-links" [class.is-open]="menuOpen" aria-label="Primary">
+      <a
+        *ngFor="let link of links"
+        [href]="'#' + link.id"
+        (click)="scrollTo(link.id, $event)"
+        [class.is-active]="activeId === link.id"
+      >
+        {{ link.label }}
+      </a>
+    </nav>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen"
+      aria-label="Toggle menu"
+    >
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>

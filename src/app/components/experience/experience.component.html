@@ -1,0 +1,22 @@
+<section id="experience" class="experience">
+  <div class="container">
+    <header appReveal>
+      <h1 class="section-title">Professional Experience</h1>
+    </header>
+
+    <ol class="timeline">
+      <li class="timeline-item" *ngFor="let role of roles" appReveal>
+        <div class="marker" [class.is-current]="role.current"></div>
+        <div class="body">
+          <span class="period">{{ role.period }}</span>
+          <h3>
+            {{ role.role }}
+            <span class="at">at</span>
+            <span class="company">{{ role.company }}</span>
+            <span *ngIf="role.current" class="badge">Current</span>
+          </h3>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>

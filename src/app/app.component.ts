@@ -1,7 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { NavComponent } from './components/nav/nav.component';
 import { HeroComponent } from './components/hero/hero.component';
-import { AboutComponent } from './components/about/about.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { QuoteComponent } from './components/quote/quote.component';
 import { ExperienceComponent } from './components/experience/experience.component';
@@ -18,7 +17,6 @@ import { SpiceComponent } from './components/spice/spice.component';
   imports: [
     NavComponent,
     HeroComponent,
-    AboutComponent,
     SkillsComponent,
     QuoteComponent,
     ExperienceComponent,
@@ -32,7 +30,6 @@ import { SpiceComponent } from './components/spice/spice.component';
     <app-nav />
     <main>
       <app-hero />
-      <app-about />
       <app-spice
         variant="secondary"
         title="I enjoy turning concepts into reality."

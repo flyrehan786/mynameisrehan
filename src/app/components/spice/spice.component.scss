@@ -35,34 +35,34 @@
 }
 
 .spice-primary {
-  background: var(--spice-red);
-  box-shadow: inset 0 0 5px #162330;
+  background: rgba(59, 30, 110, 0.18);
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.2);
 }
 
 .spice-primary h1 {
-  text-shadow: 0 0 6px var(--spice-red-shadow);
+  color: #fff;
+  text-shadow: 0 0 12px rgba(59, 30, 110, 0.6);
 }
 
 .spice-primary p {
-  color: var(--spice-red-ink);
+  color: var(--ink-2);
 }
 
 .spice-secondary {
-  background: var(--spice-cyan);
+  background: rgba(109, 60, 200, 0.12);
 }
 
 .spice-secondary h1 {
-  text-shadow: 0 0 3px var(--spice-cyan-shadow);
+  color: #fff;
+  text-shadow: 0 0 12px rgba(109, 60, 200, 0.5);
 }
 
 .spice-secondary p {
-  color: var(--spice-cyan-ink);
+  color: var(--ink-2);
 }
 
 .spice-dark {
-  background: var(--bg-2);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .spice-dark h1 {

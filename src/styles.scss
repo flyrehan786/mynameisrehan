@@ -1,22 +1,24 @@
-/* ---------- Design tokens (inspired by mynameismosh.com) ---------- */
+/* ---------- Design tokens (FitLog-inspired dark navy / violet) ---------- */
 :root {
   /* Palette */
-  --bg: #273747;
-  --bg-2: #1f2b38;
-  --bg-3: #1a2531;
-  --surface: #2f4055;
-  --surface-2: #22303e;
+  --bg-base: #0a0d1f;      /* deep navy base */
+  --bg-glow: #3b1e6e;      /* violet glow used in radial gradient */
+  --bg: transparent;        /* sections transparent so unified bg shows through */
+  --bg-2: transparent;
+  --bg-3: transparent;
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-2: rgba(255, 255, 255, 0.06);
   --ink: #ffffff;
-  --ink-2: #8da0b5;
-  --muted: #63798f;
-  --line: #324659;
-  --line-2: #3d5164;
+  --ink-2: #b6b9d1;
+  --muted: #7a7f9c;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-2: rgba(255, 255, 255, 0.14);
 
   --accent: #efc94c;
   --accent-hover: #f5d876;
-  --accent-shadow: #1f2b38;
-  --accent-2: #6dbcdb;
-  --accent-2-shadow: #387c96;
+  --accent-shadow: #1a1030;
+  --accent-2: #8b7cff;
+  --accent-2-shadow: #3b1e6e;
 
   --spice-red: #fc4349;
   --spice-red-ink: #73292b;
@@ -60,10 +62,38 @@ body {
   line-height: 1.7;
   letter-spacing: 1px;
   color: var(--ink-2);
-  background: var(--bg);
+  background-color: var(--bg-base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Fixed layered background: violet radial glow + subtle grid pattern */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(ellipse 60% 50% at 25% 25%, rgba(109, 60, 200, 0.32), transparent 60%),
+    radial-gradient(ellipse 45% 40% at 75% 10%, rgba(59, 30, 110, 0.26), transparent 65%);
+  pointer-events: none;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(139, 124, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 124, 255, 0.055) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, #000 40%, transparent 90%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, #000 40%, transparent 90%);
+  pointer-events: none;
 }
 
 img {
@@ -165,8 +195,6 @@ section {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
-  border-top: 1px solid var(--line);
-  padding-top: 1.2em;
   margin: 0 0 2em;
   text-shadow: 0 0 10px #1d2a36;
 }
@@ -233,8 +261,8 @@ section {
 
 .tags li,
 .tag {
-  background: #15202d;
-  color: #8da0b5;
+  background: rgba(255, 255, 255, 0.05);
+  color: #b6b9d1;
   font-family: var(--font-body);
   font-size: 0.78rem;
   letter-spacing: 1.5px;
@@ -246,7 +274,7 @@ section {
 .tags li:hover,
 .tag:hover {
   background: var(--accent);
-  color: #1f2b38;
+  color: #1a1030;
 }
 
 /* ---------- Reveal animation ---------- */

@@ -3,7 +3,7 @@
 }
 
 .experience {
-  background: var(--bg);
+  background: rgba(0, 0, 0, 0.20);
 }
 
 .timeline {
@@ -46,7 +46,7 @@
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: var(--bg-2);
+  background: #0a0d1f;
   border: 2px solid var(--line-2);
   transition: border-color 0.25s var(--ease), background 0.25s var(--ease);
 }

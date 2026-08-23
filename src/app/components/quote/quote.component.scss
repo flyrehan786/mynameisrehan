@@ -4,9 +4,7 @@
 
 .quote {
   padding: clamp(80px, 12vw, 130px) 0;
-  background: var(--bg-2);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  background: rgba(109, 60, 200, 0.08);
 }
 
 figure {

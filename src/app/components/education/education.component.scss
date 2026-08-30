@@ -75,22 +75,21 @@
   font-family: var(--font-heading);
   font-size: 1.05rem;
   font-weight: 700;
-  color: #fff;
   margin: 0;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.at {
-  color: var(--muted);
-  font-weight: 400;
-  margin: 0 6px;
-  text-transform: lowercase;
-  letter-spacing: 1px;
+.title {
+  color: var(--accent);
 }
 
 .school {
-  color: var(--accent);
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
 }
 
 .badge {

@@ -10,11 +10,10 @@
         <div class="body">
           <span class="period">{{ d.year }}</span>
           <h3>
-            {{ d.title }}
-            <span class="at">at</span>
-            <span class="school">{{ d.school }}</span>
+            <span class="title">{{ d.title }}</span>
             <span *ngIf="d.current" class="badge">Current</span>
           </h3>
+          <p class="school">{{ d.school }}</p>
           <p class="loc">{{ d.location }}</p>
         </div>
       </li>

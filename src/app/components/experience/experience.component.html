@@ -10,11 +10,10 @@
         <div class="body">
           <span class="period">{{ role.period }}</span>
           <h3>
-            {{ role.role }}
-            <span class="at">at</span>
             <span class="company">{{ role.company }}</span>
             <span *ngIf="role.current" class="badge">Current</span>
           </h3>
+          <p class="role">{{ role.role }}</p>
         </div>
       </li>
     </ol>

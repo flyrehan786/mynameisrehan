@@ -22,13 +22,13 @@ export class EducationComponent {
   readonly degrees: Degree[] = [
     {
       year: '2018',
-      title: 'BS Computer Science',
+      title: 'Bachelor of Science in Computer Science',
       school: 'University of Malakand',
       location: 'Malakand, KPK',
     },
     {
       year: '2014',
-      title: 'Secondary Education',
+      title: 'Faculty of Science in Intermediate Education',
       school: 'F.G Inter College',
       location: 'Malakand, KPK',
     },

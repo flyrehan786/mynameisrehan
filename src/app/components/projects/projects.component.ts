@@ -26,10 +26,10 @@ export class ProjectsComponent {
       video: 'assets/mediq.mp4',
     },
     {
-      name: 'Ignite',
+      name: 'Skolify ',
       description:
         'A unified school management SaaS that transforms complex campus workflows into an effortless, single-screen experience. It merges human resources, financial tracking, and academics — from automated visual timetable scheduling with conflict detection to robust employee records and secure payroll processing. It centralizes student life through dynamic student profiles, rigorous exam grading with instant report card generation, and an efficient library management system for book tracking. Admins can seamlessly issue official certifications, process fee billing and installment tracking, and operate with confidence knowing data privacy is guaranteed through state-of-the-art, multi-tenant security.',
-      video: 'assets/ignite.mp4',
+      video: 'assets/skolify.mp4',
     },
     {
       name: 'Omnify',

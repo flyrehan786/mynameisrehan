@@ -23,10 +23,7 @@
 }
 
 .name-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  position: relative;
 }
 
 .name {
@@ -45,16 +42,23 @@
 }
 
 .name-photo {
-  flex-shrink: 0;
-  width: 84px;
-  height: 84px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 130px;
+  height: 130px;
   object-fit: cover;
   border-radius: 8px;
   border: 2px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   opacity: 0;
-  transform: translateY(16px);
-  animation: fade-up 700ms var(--ease, ease-out) 600ms forwards;
+  animation: photo-fade-in 700ms var(--ease, ease-out) 600ms forwards;
+}
+
+@keyframes photo-fade-in {
+  to {
+    opacity: 1;
+  }
 }
 
 .title {

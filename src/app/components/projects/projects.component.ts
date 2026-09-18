@@ -42,5 +42,10 @@ export class ProjectsComponent {
         'Every rescue has a story. RescueFurWorld gives rescued cats a second chance at life — one journey at a time. The platform documents the complete arc of each cat, from the moment they are found, through medical care and recovery, to the day they find a safe and loving forever home. Built around compassion and care, it shares real stories of struggle, survival, and hope, and supports the people who dedicate their time to helping them. Small acts of kindness. Big second chances.',
       video: 'assets/rescuefurworld.mp4',
     },
+    {
+      name: 'Haven',
+      description:
+        'A multi-tenant guest house management platform built for small and mid-size properties that want a simple, no-nonsense way to manage rooms, bookings, guests and billing — without adopting a bulky hotel-chain system. It tracks room availability, reservation dates, and guest check-in/out state, generates manual invoices with paid/cancelled status and print-ready copies, and keeps every workspace fully isolated with its own staff, rooms, and invoices. Role-based staff accounts for admin, manager, and front-desk keep every teammate scoped to what they need, alongside a reusable guest directory and per-user profile management.',
+    },
   ];
 }

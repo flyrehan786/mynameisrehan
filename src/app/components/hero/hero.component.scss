@@ -22,6 +22,13 @@
   padding-top: 0;
 }
 
+.name-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
 .name {
   font-family: var(--font-heading);
   font-size: 28.6px;
@@ -32,6 +39,19 @@
   line-height: 1.15;
   margin: 0 0 0.3em;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fade-up 700ms var(--ease, ease-out) 600ms forwards;
+}
+
+.name-photo {
+  flex-shrink: 0;
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   opacity: 0;
   transform: translateY(16px);
   animation: fade-up 700ms var(--ease, ease-out) 600ms forwards;
@@ -112,6 +132,11 @@
 
   .title {
     letter-spacing: 2px;
+  }
+
+  .name-photo {
+    width: 56px;
+    height: 56px;
   }
 }
 
